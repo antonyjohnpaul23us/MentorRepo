@@ -1,7 +1,7 @@
 --- 
-env:
-  secrets-manager:
-    dockerpwd_antonyjohnpaul23us: mentorRepo/tutorial/buildSecrets:dockerhub_key1
+#env:
+#  secrets-manager:
+#    dockerpwd_antonyjohnpaul23us: mentorRepo/tutorial/buildSecrets:dockerhub_key1
 
 phases: 
   build: 
@@ -18,5 +18,5 @@ phases:
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub..."
-      - "docker login --username=\"antonyjohnpaul23us\" --password=\"$dockerpwd_antonyjohnpaul23us\""
+      - "docker login --username=\"antonyjohnpaul23us\" --password=\"access2india\""
 version: 0.1
