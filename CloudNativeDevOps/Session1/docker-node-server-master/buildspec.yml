@@ -1,6 +1,8 @@
 --- 
-#env:
-#  secrets-manager:
+env:
+  secrets-manager:
+    aws_access_key_id: mentorRepo/tutorial/apiuser_creds:aws_access_key_id
+    aws_secret_access_key: mentorRepo/tutorial/apiuser_creds:aws_secret_access_key
 #    dockerpwd_antonyjohnpaul23us: mentorRepo/tutorial/buildSecrets:dockerhub_key1
 
 phases: 
@@ -16,6 +18,8 @@ phases:
     commands: 
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
+      - "export AWS_ACCESS_KEY_ID=$aws_access_key_id"
+      - "export AWS_ACCESS_KEY_ID=$aws_secret_access_key"
       #- "docker push antonyjohnpaul23usgmail/mentor-node-server:latest"
       - "docker push 202830530179.dkr.ecr.us-east-2.amazonaws.com/node-server:latest"
   pre_build: 
