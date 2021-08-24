@@ -1,8 +1,8 @@
 --- 
 env:
   secrets-manager:
-    aws_access_key_id: mentorRepo/tutorial/apiuser_creds:aws_access_key_id
-    aws_secret_access_key: mentorRepo/tutorial/apiuser_creds:aws_secret_access_key
+    aws_access_key_id: arn:aws:secretsmanager:us-east-2:202830530179:secret:mentorRepo/tutorial/apiuser_creds-x4ZE9J:aws_access_key_id
+    aws_secret_access_key: arn:aws:secretsmanager:us-east-2:202830530179:secret:mentorRepo/tutorial/apiuser_creds-x4ZE9J:aws_secret_access_key
 #    dockerpwd_antonyjohnpaul23us: mentorRepo/tutorial/buildSecrets:dockerhub_key1
 
 phases: 
