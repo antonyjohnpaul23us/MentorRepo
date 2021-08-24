@@ -9,14 +9,17 @@ phases:
       - "echo Build started on `date`"
       - "echo Building the Docker image..."
       - "docker build -t antonyjohnpaul23usgmail/mentor-node-server CloudNativeDevOps/Session1/docker-node-server-master/."
-      - "docker tag antonyjohnpaul23usgmail/mentor-node-server antonyjohnpaul23usgmail/mentor-node-server:latest"
+      #- "docker tag antonyjohnpaul23usgmail/mentor-node-server antonyjohnpaul23usgmail/mentor-node-server:latest"
+      - "docker tag antonyjohnpaul23usgmail/mentor-node-server 202830530179.dkr.ecr.us-east-2.amazonaws.com/node-server:latest"
+      
   post_build: 
     commands: 
       - "echo Build completed on `date`"
       - "echo Pushing the Docker image..."
-      - "docker push antonyjohnpaul23usgmail/mentor-node-server:latest"
+      #- "docker push antonyjohnpaul23usgmail/mentor-node-server:latest"
+      - "docker push 202830530179.dkr.ecr.us-east-2.amazonaws.com/node-server:latest"
   pre_build: 
     commands: 
       - "echo Logging in to Docker Hub..."
-      - "docker login --username=\"antonyjohnpaul23usgmail\" --password=\"access2india\""
+      #- "docker login --username=\"antonyjohnpaul23usgmail\" --password=\"access2india\""
 version: 0.1
