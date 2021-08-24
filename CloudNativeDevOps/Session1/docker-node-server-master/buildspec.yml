@@ -20,6 +20,7 @@ phases:
       - "echo Pushing the Docker image..."
       - "export AWS_ACCESS_KEY_ID=$aws_access_key_id"
       - "export AWS_ACCESS_KEY_ID=$aws_secret_access_key"
+      - "echo $AWS_ACCESS_KEY_ID"
       #- "docker push antonyjohnpaul23usgmail/mentor-node-server:latest"
       - "docker push 202830530179.dkr.ecr.us-east-2.amazonaws.com/node-server:latest"
   pre_build: 
