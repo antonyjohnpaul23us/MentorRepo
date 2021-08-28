@@ -12,7 +12,7 @@ phases:
       - "echo Building the Docker image..."
       - "docker build -t antonyjohnpaul23usgmail/pyapp FargateECSAppWithLoadbalancer-mainline/."
       #- "docker tag antonyjohnpaul23usgmail/mentor-node-server antonyjohnpaul23usgmail/mentor-node-server:latest"
-      - "docker tag antonyjohnpaul23usgmail/pyapp 202830530179.dkr.ecr.us-east-2.amazonaws.com/node-server:latest"
+      - "docker tag antonyjohnpaul23usgmail/pyapp 202830530179.dkr.ecr.us-east-2.amazonaws.com/pyapp:latest"
       
   post_build: 
     commands: 
