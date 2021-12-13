@@ -1,0 +1,8 @@
+aws s3 mb s3://lambda1s3
+aws sqs create-queue --queue-name ECSPOVRayWorkerQueue
+
+update config.js for the lambda function wiht the queue.
+
+
+https://aws.amazon.com/blogs/compute/better-together-amazon-ecs-and-aws-lambda/
+

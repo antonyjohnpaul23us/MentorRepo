@@ -1,0 +1,31 @@
+The get-login-password is the preferred method for authenticating to an Amazon ECR private registry when using the AWS CLI. 
+
+Format:
+
+aws ecr get-login-password --region region | docker login --username AWS --password-stdin <aws_id>.dkr.ecr.region.amazonaws.com
+
+eg:
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 202830530179.dkr.ecr.us-east-2.amazonaws.com
+
+
+1 - Create a ecr names <aws_id>.dkr.ecr.us-east-2.amazonaws.com/flask-app
+docker build -t <aws_id>.dkr.ecr.us-east-2.amazonaws.com/flask-app:latest .
+docker push <aws_id>.dkr.ecr.us-east-2.amazonaws.com/flask-app:latest
+
+Create a ECS with Fargate 
+Create tast definititon stating the flask app adn opening port 8081
+
+
+Creata ALB
+    Create a Sec Grp with port 80 open
+    Create a Target group with target type IP and the port as 8081 since the application is running on it.
+    Wait until it is provitioned
+
+
+Creata a task specifying the container
+Create a service
+Now if the , MODIFY THE Load Balancers security group's inbound rules
+
+Create a load balancer ad security group with port 80 for frintend open
+Create sg with port 8081 open for health probes from the oad balancer to ecs 
+
